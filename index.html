@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrandMaker Studio - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    main {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .text-section {
+      flex: 1;
+      min-width: 300px;
+      padding-right: 2rem;
+    }
+
+    .text-section h2 {
+      color: #ff6600;
+      margin-top: 0;
+    }
+
+    .main-image {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1a1a1a;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>BrandMaker Studio</h1>
+    <nav>
+      <ul>
+        <li><a href="./Contribute.html" style="color: white;">Contribute</a></li>
+        <li><button onclick="location.href='./Login.html'">Sign In</button></li>
+        <li>
+          <a href="./Login.html">
+            <img alt="Login" src="./295128.png" class="icon" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="text-section">
+      <h2>Bringing your brand to life</h2>
+      <p>
+        Welcome to BrandMaker Studio — your go-to place for custom logo design, branding kits,
+        and digital creativity. We work with bold ideas and clean aesthetics to build a visual identity
+        that stands out.
+      </p>
+      <p>
+        Explore our portfolio or get in touch to start building something great together.
+      </p>
+      <button onclick="location.href='./portfolio.html'">View Portfolio</button>
+      <button onclick="location.href='./meet.html'">Meet the Team</button>
+    </div>
+
+    <div>
+      <img alt="Technology" src="./Logo.png" class="main-image" />
+    </div>
+  </main>
+
+ <div class="subscribe">
+  <h2 class="createtitle">An additional challenge for you!</h2>
+  <label for="number">Type a number between 0 and 100. Try to guess the number!</label>
+  <form action="javascript:guessNumber(document.getElementById('number-number').value, random);" method="post">
+    <input type="number" id="number-number" name="number">
+    <input class="subscribebutton" type="submit" value="Guess now!">
+  </form>
+  <p id="answer"></p>
+</div>
+<section id="subscribe" class="subscription-section">
+  <h2>Subscribe to Our Newsletter</h2>
+  <p>Get the latest updates from BrandMaker Studio!</p>
+  <form id="subscriptionForm">
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="subscriptionMessage"></p>
+</section>
+<div class="card">
+  <h3>Yearly Budget Problem</h3>
+  <p>
+    In a hospital, we can find three areas: Urgencies, Pediatric and Traumatology.<br>
+    The yearly budget is distributed: Urgencies (37%), Pediatric (42%), and Traumatology (21%).<br>
+    Get the amount of money that each section will receive from a given budget.
+  </p>
+  <button onclick="openModal('flowchart1')">View flowchart</button>
+</div>
+
+<div id="flowchart1" class="modal">
+  <span class="close" onclick="closeModal('flowchart1')">&times;</span>
+  <img src="Exercise_1_solution.png" class="modal-content">
+</div>
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+</script>
+
+<div class="card">
+  <h3>Even Numbers</h3>
+  <p>
+    Do an algorithm that can calculate the even numbers from 20 to 200.
+  </p>
+  <button onclick="openModal('flowchart2')">View flowchart</button>
+</div>
+
+<div id="flowchart2" class="modal">
+  <span class="close" onclick="closeModal('flowchart2')">&times;</span>
+  <img src="Even Numbers.png" class="modal-content">
+</div>
+
+  
+  <footer>
+    <p>&copy; 2024 Brandmaker Studio. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="./instagram-icon.png" alt="Instagram" class="social-icon" />
+      </a>
+      <a href="https://www.twitter.com" target="_blank">
+        <img src="./twitter-icon.png" alt="Twitter" class="social-icon" />
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>

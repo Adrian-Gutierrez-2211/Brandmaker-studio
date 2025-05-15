@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" onsubmit="return verifyEmail(event)">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit">Verify Email</button>
+            <button type="button" onclick="goHome()" style="margin-top: 10px; background-color: #ccc; color: black;">Go to Home</button>
+        </form>
+    </div>
+
+    <script>
+        function verifyEmail(event) {
+            event.preventDefault(); 
+
+            const email = document.getElementById("email").value;
+            if (email.includes("@")) {
+                alert("Verification email sent to " + email);
+                
+            } else {
+                alert("Please enter a valid email.");
+            }
+
+            return false;
+        }
+
+        function goHome() {
+            window.location.href = "index.html"; 
+        }
+    </script>
+</body>
+</html>
